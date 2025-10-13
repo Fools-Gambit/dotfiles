@@ -9,17 +9,17 @@
 
 window#waybar {
     background: transparent;
-    background-color: @phthalo;
-    color: @pinker;
+    background-color: @9;
+    color: #FFFFFF;
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @lime;
+    border-bottom: 1px solid @3;
 }
 
 #window {
     margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 button {
@@ -30,8 +30,8 @@ button {
 
 button:hover {
     background: inherit;
-    color: @lime;
-    border-top: 2px solid @lime;
+    color: @16;
+    border-top: 2px solid @16;
 }
 
 #workspaces button {
@@ -40,20 +40,21 @@ button:hover {
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @pinker;
-    border-top: 2px solid @pinker;
+    color: #FFFFFF;
+    border-top: 2px solid #FFFFFF;
 }
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @pinker;
-    border-top: 2px solid @pinker;
+    color: #FFFFFF;
+    border-top: 2px solid #FFFFFF;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
 }
 
+#disk,
 #pulseaudio,
 #clock,
 #battery,
@@ -76,24 +77,39 @@ button:hover {
   padding-right: 4px;
 }
 
+#disk {
+    color: @RED;
+    border-bottom: 2px solid @RED;
+}
+
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    color: @PURPLE;
+    border-bottom: 2px solid @PURPLE;
 }
 
 #clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+    color: @PURPLE;
+    border-bottom: 2px solid @PURPLE;
 }
 
 #pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @BLUE;
+    border-bottom: 2px solid @BLUE;
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @GREEN;
+    border-bottom: 2px solid @GREEN;
+}
+
+#network.upspd {
+    color: @ORANGE;
+    border-bottom: 2px solid @ORANGE;
+}
+
+#network.dwnspd {
+    color: @YELLOW;
+    border-bottom: 2px solid @YELLOW;
 }
 
 #idle_inhibitor {

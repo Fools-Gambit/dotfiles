@@ -2,9 +2,15 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["custom/spotify", "network#upspd", "network#dwnspd", "network", "pulseaudio", "battery", "clock"],
+  "modules-right": ["custom/spotify", "disk",  "network#upspd", "network#dwnspd", "network", "pulseaudio", "battery", "clock"],
+
+  "disk": {
+    "format": "   {percentage_used}% ",
+    "interval": 30,
+    "path": "/",
+  },
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#9400D4'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -24,7 +30,7 @@
   },
   "custom/spotify": {
     "exec": "/usr/bin/python3 ~/usr/bin/env/mediaplayer.py --player spotify",
-    "format": " {}   ",
+    "format": "{}  ",
     "return-type": "json",
     "on-click": "playerctl play-pause -p spotify",
     "on-scroll-up": "playerctl next -p spotify",
@@ -32,17 +38,17 @@
   }, 
   "network": {
     "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>   </span> {ipaddr}",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    "format-ethernet": "<span size='13000' foreground='#00FF00'>  </span> {ipaddr}",
+    "format-linked": "{ifname} (No IP)   ",
+    "format-disconnected": "<span size='13000' foreground='#00FF00'>  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
   },
   "network#dwnspd": {
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>  </span> {bandwidthDownBytes}",
+    "format-ethernet": "<span size='13000' foreground='#FFDE21'>  </span> {bandwidthDownBytes}",
     "interval": 1
   },
   "network#upspd": {
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>  </span> {bandwidthUpBytes}",
+    "format-ethernet": "<span size='13000' foreground='#FF8000'>  </span> {bandwidthUpBytes}",
     "interval": 1
   },
   "pulseaudio": {
