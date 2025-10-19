@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "custom/updates"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["custom/spotify", "disk",  "network#upspd", "network#dwnspd", "network", "pulseaudio", "battery", "clock"],
 
@@ -58,5 +58,11 @@
           "default": ["", "", " "]
       },
       "on-click": "pavucontrol"
-  }
+  },
+  	"custom/updates": {
+        "format" : "  {}",
+		"exec": "$HOME/.config/waybar/scripts/updates.sh",
+		"tooltip": false,
+		"on-click": "kitty yay --noconfirm"
+    }
 }
