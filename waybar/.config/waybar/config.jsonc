@@ -3,11 +3,19 @@
   "modules-left": ["hyprland/workspaces", "custom/updates"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["custom/spotify", "disk",  "network#upspd", "network#dwnspd", "network", "pulseaudio", "battery", "clock"],
-
+  "output": ["DP-4"],
+    "hyprland/workspaces": {
+        "all-outputs": true,
+       // "format": "{icon}",
+       // "format-icons": {
+       //     "default": "",
+       //     "active": "",
+       //     "urgent": ""}
+    },
   "disk": {
     "format": "   {percentage_used}% ",
     "interval": 30,
-    "path": "/",
+    "path": "/"
   },
   "clock": {
     "format": "<span foreground='#9400D4'>   </span>{:%a %d %H:%M}",
@@ -60,9 +68,10 @@
       "on-click": "pavucontrol"
   },
   	"custom/updates": {
-        "format" : "  {}",
-		"exec": "$HOME/.config/waybar/scripts/updates.sh",
-		"tooltip": false,
-		"on-click": "kitty yay --noconfirm"
+        "format" : "   ",
+        //"format" : "Up {}",
+	"exec": "$HOME/.config/waybar/scripts/updates.sh",
+	"tooltip": {} ,
+	"on-click": "kitty yay --noconfirm"
     }
 }
